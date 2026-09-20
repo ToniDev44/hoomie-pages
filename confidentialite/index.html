@@ -90,10 +90,13 @@ serveur, ni automatiquement, ni manuellement.</p>
   composant sécurisé du téléphone. Elle n'existe nulle part dans l'application.</li>
   <li>La sauvegarde automatique de Google est <strong>désactivée</strong> pour cette application,
   afin que la base ne parte pas dans un stockage tiers.</li>
-  <li>Deux réserves honnêtes : si le trousseau refuse de fournir la clé, l'application ouvre la
-  base <em>en clair</em> plutôt que de te bloquer l'accès à tes propres données ; et une version
-  web de l'application ne serait pas chiffrée, le composant nécessaire n'existant pas dans un
-  navigateur.</li>
+  <li>Si le trousseau refuse de fournir la clé, l'application <strong>te le dit à l'écran</strong>
+  par un bandeau qui ne se ferme pas. Une base déjà chiffrée n'est alors <strong>jamais</strong>
+  ouverte en clair : l'application refuse de démarrer et explique que tes données sont intactes,
+  plutôt que de laisser croire qu'elles ont disparu. Seule une base qui n'a jamais été chiffrée
+  continue de s'ouvrir, et le bandeau reste affiché tant que la clé manque.</li>
+  <li>Une version web de l'application ne serait pas chiffrée, le composant nécessaire n'existant
+  pas dans un navigateur. La V4 est Android uniquement.</li>
 </ul>
 
 <h2>Ce que l'application lit sur tes appareils</h2>
