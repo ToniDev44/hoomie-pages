@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Règles de confidentialité — Hoomie</title>
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --encre: #0b0d10;
+    --papier: #f7f7f5;
+    --texte: #16191d;
+    --attenue: #5a6169;
+    --trait: #e2e2de;
+    --accent: #1f6f6b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #0b0d10;
+      --texte: #e8e8e4;
+      --attenue: #9aa1a8;
+      --trait: #23272c;
+      --accent: #63c9c2;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--papier);
+    color: var(--texte);
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  header { border-bottom: 1px solid var(--trait); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  .marque {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-weight: 700; letter-spacing: .02em; font-size: 1.05rem; text-decoration: none;
+    color: var(--texte);
+  }
+  .symbole {
+    width: 1.9rem; height: 1.9rem; border-radius: .55rem;
+    background: var(--encre); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1rem;
+  }
+  @media (prefers-color-scheme: dark) { .symbole { background: var(--texte); color: var(--papier); } }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .4rem; letter-spacing: -.01em; }
+  h2 { font-size: 1.05rem; margin: 2.4rem 0 .6rem; letter-spacing: .01em; }
+  p, li { color: var(--texte); }
+  .attenue { color: var(--attenue); font-size: .92rem; }
+  ul { padding-left: 1.1rem; }
+  li { margin: .3rem 0; }
+  a { color: var(--accent); }
+  .encadre {
+    border: 1px solid var(--trait); border-radius: .7rem;
+    padding: 1rem 1.15rem; margin: 1.6rem 0; background: color-mix(in srgb, var(--accent) 6%, transparent);
+  }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--trait); }
+  nav a { margin-right: 1.1rem; font-size: .92rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="marque" href="../">
+      <span class="symbole" aria-hidden="true">H</span> Hoomie
+    </a>
+  </header>
+  <h1>Règles de confidentialité</h1>
+  <p class="attenue">Dernière mise à jour : 20 septembre 2026</p>
+  
+<p>Hoomie est une application <strong>personnelle</strong> de suivi de santé. Elle est conçue pour
+que tes données restent chez toi. Cette page dit exactement ce qui est stocké, ce qui sort de ton
+téléphone, vers qui, et comment tout effacer.</p>
+
+<div class="encadre">
+  <p><strong>Aucune donnée n'est vendue, cédée ni utilisée à des fins publicitaires.</strong>
+  Hoomie n'affiche aucune publicité, ne contient ni traceur, ni outil de mesure d'audience, ni
+  télémétrie. Il n'existe aucun compte utilisateur sur un serveur.</p>
+</div>
+
+<h2>Où vivent tes données</h2>
+<p><strong>Sur ton téléphone, et nulle part ailleurs.</strong> L'application range tout dans une
+base de données locale. Il n'existe aucune synchronisation : ta base n'est téléversée sur aucun
+serveur, ni automatiquement, ni manuellement.</p>
+<ul>
+  <li>Sur Android, cette base est <strong>chiffrée</strong> (SQLCipher). La clé fait 256 bits,
+  elle est tirée au hasard sur l'appareil et rangée dans le trousseau Android protégé par le
+  composant sécurisé du téléphone. Elle n'existe nulle part dans l'application.</li>
+  <li>La sauvegarde automatique de Google est <strong>désactivée</strong> pour cette application,
+  afin que la base ne parte pas dans un stockage tiers.</li>
+  <li>Deux réserves honnêtes : si le trousseau refuse de fournir la clé, l'application ouvre la
+  base <em>en clair</em> plutôt que de te bloquer l'accès à tes propres données ; et une version
+  web de l'application ne serait pas chiffrée, le composant nécessaire n'existant pas dans un
+  navigateur.</li>
+</ul>
+
+<h2>Ce que l'application lit sur tes appareils</h2>
+<p>Hoomie <strong>lit</strong> ; elle n'écrit jamais dans tes autres applications de santé.</p>
+<ul>
+  <li><strong>Health Connect</strong> (Android) : pas, distance, étages, calories, séances,
+  sommeil et ses phases, fréquence cardiaque, variabilité cardiaque, respiration, saturation en
+  oxygène, température, VO₂max, poids et composition corporelle. Chaque type fait l'objet d'une
+  autorisation distincte que tu accordes ou refuses.</li>
+  <li><strong>API Google Health</strong> : uniquement la <strong>saturation en oxygène</strong>
+  (moyenne d'une nuit et détail minute par minute) et les <strong>calories actives</strong>.
+  L'accès est en <strong>lecture seule</strong> ; Hoomie ne peut rien écrire dans ton compte
+  Google.</li>
+</ul>
+
+<h3>Engagement d'usage limité</h3>
+<div class="encadre">
+  <p>The use of information received from Google Health API and/or Developer Tools will adhere to
+  the Google Health API Developer and User Data Policy, including the Limited Use requirements.</p>
+  <p class="attenue"><a href="https://developers.google.com/health/policies/health-api-developer-user-data-policy"
+  rel="noreferrer">Lire le règlement de Google</a></p>
+  <p class="attenue">En clair : les données reçues de Google Health servent uniquement à
+  t'afficher tes propres mesures dans l'application. Elles ne sont ni revendues, ni cédées à des
+  courtiers, ni utilisées pour de la publicité, ni pour une décision de crédit, ni pour de la
+  recherche. Hoomie ne les soumet à aucune revue humaine.</p>
+</div>
+
+<h2>Ce qui sort de ton téléphone, et vers qui</h2>
+<p>Quatre chemins seulement. Chacun est déclenché par un geste ou par une fonction que tu peux
+laisser éteinte.</p>
+
+<h3>1. Le coach</h3>
+<p>Quand tu poses une question au coach ou demandes un bilan, un résumé de tes données part vers
+un service d'intelligence artificielle (<strong>Anthropic</strong>, API Claude), relayé par une
+fonction serveur qui détient la clé d'accès. <strong>C'est le seul chemin par lequel des données
+de santé quittent l'appareil.</strong></p>
+<p>Ce qui peut être inclus, selon la question posée :</p>
+<ul>
+  <li>ton <strong>prénom</strong> et ton <strong>âge en années</strong> ;</li>
+  <li>poids, variation, et composition corporelle ;</li>
+  <li>alimentation : calories, protéines, <strong>aliments et quantités du jour</strong>,
+  habitudes récurrentes, micronutriments, caféine, régimes déclarés ;</li>
+  <li>compléments alimentaires : noms, posologies, observance ;</li>
+  <li>hydratation, y compris le nombre de verres d'alcool ;</li>
+  <li>pas, séances de sport et sports pratiqués ;</li>
+  <li>sommeil, et les <strong>mesures de la nuit en moyennes sur 7 jours</strong> : variabilité
+  cardiaque, fréquence cardiaque au repos, respiration, <strong>saturation en oxygène</strong>,
+  température au poignet, VO₂max ;</li>
+  <li>les <strong>photos</strong> que tu prends toi-même d'un repas, d'une étiquette alimentaire
+  ou d'une boîte de complément, quand tu demandes qu'elles soient analysées.</li>
+</ul>
+<p><strong>Ce qui ne part jamais</strong>, même dans un bilan complet :</p>
+<ul>
+  <li>les <strong>valeurs de tes analyses sanguines</strong> — seul leur nombre est transmis
+  (« N marqueurs, dont M hors plage »), jamais un résultat nommé ;</li>
+  <li>tes <strong>traitements et médicaments</strong> ;</li>
+  <li>ta <strong>date de naissance</strong> ;</li>
+  <li>le contenu de la page <strong>Intime</strong>, tant qu'elle est verrouillée : ces données ne
+  sont alors même pas lues dans la base. Si tu déverrouilles cette page avec ton code pour en
+  parler au coach, un résumé chiffré de ton activité intime et ton score IIEF-5 peuvent être
+  inclus — c'est ton geste qui l'autorise, jamais l'application.</li>
+</ul>
+<p class="attenue">Le coach est facultatif. Sans configuration d'accès, les fonctions d'IA restent
+éteintes et l'application fonctionne normalement.</p>
+
+<h3>2. Le code de secours par courriel</h3>
+<p>Si tu oublies ton mot de passe, l'application demande à un service d'envoi de courriel
+(<strong>Resend</strong>) de t'expédier un code à six chiffres. Sont transmis : ton
+<strong>adresse e-mail</strong>, ton <strong>prénom</strong> et le code. <strong>Aucune donnée de
+santé.</strong> Le code n'est pas conservé côté serveur.</p>
+
+<h3>3. La lecture de l'API Google Health</h3>
+<p>Une fonction serveur détient l'autorisation d'accès à ton compte Google et va y chercher ta
+saturation en oxygène et tes calories actives. Ce qui est stocké sur ce serveur se limite à un
+<strong>identifiant d'appareil tiré au hasard</strong> et aux jetons d'accès Google. <strong>Aucune
+donnée de santé n'y est conservée</strong> : elle transite et redescend dans ton téléphone.</p>
+
+<h3>4. Les services d'information, quand tu les utilises</h3>
+<ul>
+  <li><strong>Open-Meteo</strong> (météo, qualité de l'air, pollens) reçoit ta
+  <strong>position GPS</strong>, arrondie au dix-millième de degré. C'est la donnée la plus
+  sensible qui sorte en dehors du coach. Refuse l'autorisation de localisation et ces écrans
+  restent vides plutôt que de t'envoyer ailleurs.</li>
+  <li><strong>OpenStreetMap</strong> sert les fonds de carte d'un parcours GPS : afficher la carte
+  d'une séance lui révèle indirectement où tu es passé.</li>
+  <li><strong>Open Food Facts</strong> reçoit un code-barres scanné ou un terme de recherche.
+  Aucune donnée personnelle, mais le produit consulté est connu du service.</li>
+  <li><strong>Base de composition des aliments (USDA)</strong>, si elle est activée : un terme de
+  recherche, sans donnée personnelle.</li>
+  <li><strong>Ton agenda</strong> : si tu ajoutes une adresse d'agenda iCal, l'application va la
+  lire à cette adresse et range les rendez-vous dans ta base locale.</li>
+</ul>
+<p class="attenue">Le catalogue de médicaments et la table de composition des aliments sont
+<strong>embarqués dans l'application</strong> : chercher un médicament ou un aliment n'émet aucune
+requête.</p>
+
+<h2>Durée de conservation</h2>
+<p>Tes données restent sur ton téléphone tant que tu les gardes. Rien n'est conservé ailleurs,
+donc rien n'expire ailleurs. Les jetons d'accès Google restent sur le serveur jusqu'à ce que tu
+coupes le lien.</p>
+
+<h2>Effacer, couper, retirer ton consentement</h2>
+<ul>
+  <li><strong>Couper l'accès Google Health</strong> : bouton « Couper » sur la carte Google Health,
+  page Récupération → Tes mesures. Les jetons sont alors supprimés du serveur. Tu peux aussi
+  révoquer l'accès depuis
+  <a href="https://myaccount.google.com/permissions" rel="noreferrer">ton compte Google</a>.</li>
+  <li><strong>Retirer une autorisation Health Connect</strong> : depuis l'application Health
+  Connect d'Android, type par type.</li>
+  <li><strong>Effacer tes données</strong> : l'application propose de repartir de zéro, ce qui
+  efface la base locale.</li>
+  <li><strong>Tout supprimer</strong> : désinstaller l'application supprime la base et la clé de
+  chiffrement. Cette opération est définitive.</li>
+</ul>
+
+<h2>Enfants</h2>
+<p>Hoomie n'est pas destinée aux personnes de moins de 16 ans et ne leur est pas proposée.</p>
+
+<h2>Modifications</h2>
+<p>Cette page est mise à jour lorsque l'application change ce qu'elle fait de tes données. La date
+en haut indique la dernière révision.</p>
+
+<h2>Contact</h2>
+<p>Pour toute question ou demande relative à tes données :
+<a href="mailto:toni.briard@gmail.com">toni.briard@gmail.com</a>.</p>
+
+  <footer>
+    <nav>
+      <a href="../">Accueil</a>
+      <a href="../confidentialite/">Confidentialité</a>
+      <a href="../conditions/">Conditions</a>
+    </nav>
+    <p class="attenue">Hoomie — application personnelle de suivi de santé, Android.<br>
+    Contact : <a href="mailto:toni.briard@gmail.com">toni.briard@gmail.com</a></p>
+  </footer>
+</main>
+</body>
+</html>

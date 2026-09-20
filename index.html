@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoomie — Hoomie</title>
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --encre: #0b0d10;
+    --papier: #f7f7f5;
+    --texte: #16191d;
+    --attenue: #5a6169;
+    --trait: #e2e2de;
+    --accent: #1f6f6b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #0b0d10;
+      --texte: #e8e8e4;
+      --attenue: #9aa1a8;
+      --trait: #23272c;
+      --accent: #63c9c2;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--papier);
+    color: var(--texte);
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  header { border-bottom: 1px solid var(--trait); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  .marque {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-weight: 700; letter-spacing: .02em; font-size: 1.05rem; text-decoration: none;
+    color: var(--texte);
+  }
+  .symbole {
+    width: 1.9rem; height: 1.9rem; border-radius: .55rem;
+    background: var(--encre); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1rem;
+  }
+  @media (prefers-color-scheme: dark) { .symbole { background: var(--texte); color: var(--papier); } }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .4rem; letter-spacing: -.01em; }
+  h2 { font-size: 1.05rem; margin: 2.4rem 0 .6rem; letter-spacing: .01em; }
+  p, li { color: var(--texte); }
+  .attenue { color: var(--attenue); font-size: .92rem; }
+  ul { padding-left: 1.1rem; }
+  li { margin: .3rem 0; }
+  a { color: var(--accent); }
+  .encadre {
+    border: 1px solid var(--trait); border-radius: .7rem;
+    padding: 1rem 1.15rem; margin: 1.6rem 0; background: color-mix(in srgb, var(--accent) 6%, transparent);
+  }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--trait); }
+  nav a { margin-right: 1.1rem; font-size: .92rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="marque" href="./">
+      <span class="symbole" aria-hidden="true">H</span> Hoomie
+    </a>
+  </header>
+  <h1>Hoomie</h1>
+  <p class="attenue">Dernière mise à jour : 20 septembre 2026</p>
+  
+<p>Hoomie rassemble au même endroit ce que tes appareils mesurent et ce que tu notes toi-même.
+Elle sert à <strong>voir ce qui a eu lieu</strong> : tes nuits, ton effort, ton alimentation, tes
+soins — et à repérer ce qui sort de tes habitudes.</p>
+
+<h2>Ce qu'elle fait</h2>
+<ul>
+  <li><strong>Sommeil et récupération</strong> — durée, phases, dette de sommeil, et les marqueurs
+  de la nuit : variabilité cardiaque, fréquence cardiaque au repos, respiration, saturation en
+  oxygène.</li>
+  <li><strong>Activité</strong> — pas, étages, distance, séances, charge cardiaque.</li>
+  <li><strong>Poids et composition</strong> — masse grasse, masse maigre, masse hydrique, masse
+  osseuse, lues depuis une balance connectée.</li>
+  <li><strong>Alimentation et hydratation</strong> — journal des repas, valeurs nutritionnelles,
+  boissons.</li>
+  <li><strong>Soins</strong> — traitements, compléments, rendez-vous, analyses.</li>
+</ul>
+
+<h2>Les principes qui la tiennent</h2>
+<div class="encadre">
+  <p><strong>Elle enregistre ce qui a eu lieu, elle ne prescrit rien.</strong> Hoomie compare tes
+  mesures à <em>tes</em> propres habitudes, jamais à une norme de population, et ne pose aucun
+  diagnostic.</p>
+</div>
+<ul>
+  <li><strong>Locale d'abord.</strong> Tes données vivent sur ton téléphone. L'application
+  fonctionne entièrement hors réseau.</li>
+  <li><strong>Un vide se dit.</strong> Quand une mesure manque, elle affiche un tiret et explique
+  pourquoi — elle ne comble jamais par une estimation présentée comme une mesure.</li>
+  <li><strong>Elle compte sans juger.</strong> Aucun classement, aucun palmarès, rien qui
+  reproche.</li>
+</ul>
+
+<h2>D'où viennent les mesures</h2>
+<p>Des appareils que tu as déjà : montre, balance, et les applications de santé d'Android. Hoomie
+les <strong>lit</strong> ; elle n'y écrit jamais.</p>
+
+<h2>En savoir plus</h2>
+<nav>
+  <a href="confidentialite/">Règles de confidentialité</a>
+  <a href="conditions/">Conditions d'utilisation</a>
+</nav>
+
+  <footer>
+    <nav>
+      <a href="./">Accueil</a>
+      <a href="confidentialite/">Confidentialité</a>
+      <a href="conditions/">Conditions</a>
+    </nav>
+    <p class="attenue">Hoomie — application personnelle de suivi de santé, Android.<br>
+    Contact : <a href="mailto:toni.briard@gmail.com">toni.briard@gmail.com</a></p>
+  </footer>
+</main>
+</body>
+</html>
